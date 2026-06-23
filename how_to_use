@@ -1,0 +1,54 @@
+## How to Apply FBRef-RT to a New Dataset
+
+To apply the proposed method to a new dataset, the user should follow the steps below.
+
+### 1. Prepare the data
+
+The dataset should be split into separate training and test files in CSV format.
+
+- Place the training file under `train_data/`
+- Place the test file under `test_data/`
+- The train and test files should have the same file name
+- The response variable is expected to be in the last column
+
+### 2. Load the core functions
+
+The main FBRef-RT functions are defined in:
+
+- `main_frt_pipeline_functions.R`
+
+This file should be sourced before running the search or refinement scripts.
+
+### 3. Run CART+FBRef-RT
+
+To apply the proposed method in the single-tree CART setting, run:
+
+- `random_search_frt.R`
+
+This script performs random search for the CART+FBRef-RT model and evaluates the resulting configurations.
+
+### 4. Run Bagging+FBRef-RT
+
+To apply the proposed method in the Bagging setting, run the corresponding script in:
+
+- `bagging_frt/`
+
+This part of the repository contains the code for Bagging-based FBRef-RT experiments.
+
+### 5. Run Random Forest+FBRef-RT
+
+To apply the proposed method in the Random Forest setting, run the corresponding script in:
+
+- `random_forest/`
+
+This part of the repository contains the code for Random-Forest-based FBRef-RT experiments.
+
+### 6. Inspect outputs
+
+The scripts generate outputs such as:
+
+- best hyperparameter configurations
+- dataset-level performance summaries
+- random-search iteration results
+- runtime summaries
+- result plots
