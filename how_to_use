@@ -52,3 +52,10 @@ The scripts generate outputs such as:
 - random-search iteration results
 - runtime summaries
 - result plots
+
+
+################  Important Note ###########################
+
+Some scripts may contain file paths that should be adapted to the user’s local folder structure before execution.
+
+############################################################
